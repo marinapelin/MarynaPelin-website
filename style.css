@@ -1,0 +1,203 @@
+/*
+Date: 20.03.2020
+Author: Marina Pelin
+*/
+@import url("reset.css");
+
+p {
+    text-decoration: none;
+    color: #777;
+    font-size: 14px;
+}
+/*Дополнительные стили*/
+#wrap {
+	width: 1010px;
+	background: #fff;
+	margin: 0 auto;
+}
+.line {
+	height: 10px;
+	width: 960px;
+    background: #66Bfb7;
+    margin: 0 auto;
+}
+#menu {
+	margin-top: 20px;
+}
+#menu ul {
+
+}
+#menu ul li {
+
+	padding-right: 8px;
+}
+#menu ul li a {
+	color: #fff;
+	text-decoration: none;
+}
+#menu ul li a:hover {
+	color: #fff;
+	text-decoration: none;
+	display: block;
+	background: #333;
+}
+#m1 {
+	display:block;
+	width: 110px;
+	height: 30px;
+	background: #66Bfb7;
+	padding-top: 10px; 
+	padding-left: 9px;
+}
+
+/*HEADER*/
+#header {
+	margin-top: 70px;
+	margin-left: 25px;
+}
+#header_top a {
+    color: #66Bfb7;
+    text-decoration: none;
+    font-size: 36px;
+}
+#header_top a:hover {
+    color: #777;
+    text-decoration: none;
+    font-size: 36px;
+    font-weight: 48px;
+}
+#header_bot p {
+	font-size: 16px;
+	padding-top: 5px;
+	padding-left: 2px;
+	font-style: italic;
+}
+/*TEXT*/
+p{
+	font-size: 30px;
+}
+#text p {
+	margin-left: 25px;
+	text-indent: 20px;
+}
+#text {
+		width: 758px;
+		padding-top: 5px;
+}
+/*COPYRIGHT*/
+#cop {
+	margin-left: 25px;	
+	color: #66Bfb7;
+	text-decoration: none;
+	font-size: 12px;
+}
+#cop a {
+	color: #777;
+	text-decoration: none;
+	font-size: 12px;
+}
+#cop a:hover {
+	color: #777;
+	text-decoration: underline;
+	font-size: 12px;
+}
+/*IMG*/
+/* Если картинка маленькая*/
+#topgif {
+	float: right;
+}
+#mini {
+	height: 400px;
+	float: right;
+    margin-right: 25px;
+	border: 4px double black; 
+}
+#large {
+	height: 800px;
+	float: left;
+}
+
+#contaier {
+	display: flex;
+	/*flex-direction: column;
+	justify-content: space-around;
+	flex-wrap: wrap;*/
+}
+#wormstoo img {
+	height: 100px;
+}
+
+/*
+{
+	src:url(ANIMATIONshark.gif);
+}*\
+/*FULL SCREEN*/
+
+/*SCREEN SIZE CHANGES*/
+@media (min-width: 1000px){
+	body{
+		background-color: rgb(135, 217, 250);
+	}
+	#changablesizeQuote{
+		height:500px;
+	}
+	#worms img {
+		height: 300px;
+	}
+	#wormstoo img {
+		height: 100px;
+	}
+	#changablesizesmalllogo{
+		height:100px;
+	}
+}
+@media (max-width: 1000px)and(min-width: 600px){
+	body{
+		background-color: lightgreen;
+	}
+	#wrap {
+		width: fit-content;
+		background: rgb(168, 68, 68);
+		margin: 0 250;
+	}
+	#changablesizeQuote{
+		height:200px;
+	}
+	#worms img {
+		height: 300px;
+	}
+	#wormstoo img {
+		height: 100px;
+	}
+	#changablesizesmalllogo{
+		height:50px;
+	}
+}
+@media (max-width: 599px){
+	body{
+		background-color: rgb(6, 85, 6);
+	}
+	#large{
+		height: 400px;
+	}
+	#wrap {
+		width: fit-content;
+		background: lightgrey;
+		margin: 0 250;
+	}
+	#changablesizeQuote{
+		height:400px;
+	}
+	#worms img {
+		height: 100px;
+	}
+	#wormstoo img {
+		height: 50px;
+	}
+	#changablesizesmallHow{
+		height:200px;
+	}
+	#changablesizesmalllogo{
+		height:100px;
+	}
+}
