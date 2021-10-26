@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+<meta charset=utf-8 />
+<link rel="stylesheet" type="text/css" href="style.css">
+
+<style>
+	body{
+	background-color: #026873;
+background-image: linear-gradient(90deg, rgba(255,255,255,.07) 50%, transparent 50%),
+linear-gradient(90deg, rgba(255,255,255,.13) 50%, transparent 50%),
+linear-gradient(90deg, transparent 50%, rgba(255,255,255,.17) 50%),
+linear-gradient(90deg, transparent 50%, rgba(255,255,255,.19) 50%);
+background-size: 13px, 29px, 37px, 53px;}
+	div{
+		display: inline-block;
+		margin-left: 20px;
+		height: 100px;  
+		background-size: contain;
+		margin-top: 0%;
+
+	}
+	.block1{
+		border-radius: 2px;
+		border: solid black;
+		
+		background-image: url(gifblink.gif);
+		width:15%;
+		margin-left: 10%;
+	}
+	.block2{
+		/*background-image: url(imgTinyartists.jpg);*/
+		background-color: #66Bfb7;
+		width: 45%;
+	}
+	.block3{
+		border-radius: 2px;
+		border: solid black;
+		
+		background-image: url(gifblink.gif);
+		width: 15%;
+	}
+	#infbox{
+		background-color: #f5f5f5;
+		margin:10% 30%;
+	}
+	form{
+	display: block;
+    width:250px;
+    padding:15px 20px;
+	margin-left:40%;
+/*    padding:4% 30%;*/
+    background:#f5f5f5; 
+	border-radius: 10px;
+}
+label{
+    display:block;
+	margin-top:1em;
+	margin-bottom:0.5em;
+	}
+	
+label:first-child{
+    margin-top:0;
+}
+input[type="text"],
+input[type="password"]{
+    width:100%;
+    border:1px solid #ccc;
+	padding:4px 5px;
+	background:white;
+	border-radius: 5px;
+	box-shadow:inset 0 4px 2px rgba(0, 0, 0, 0.2);
+	box-sizing:border-box;
+	}
+input[type="text"]:focus,
+input[type="password"]:focus{
+    box-shadow:0 0 5px rgba(50, 200, 255, 0.5);
+	outline: none;
+	}
+input[type="submit"]{
+    display:block;
+	margin-top:1em;
+	padding:5px 15px;
+	font-weight: bold;
+	color:#333;
+	background: white;
+	border: none;
+	border-radius: 12px; 
+	background-image: linear-gradient(to bottom, #fff, #ddd);
+	box-shadow:inset 0 1px 2px rgba(0, 0, 0, 0.3);
+	text-shadow:0 1px 1px white;
+	}	
+	@media (max-width: 599px){
+	body{
+
+	}
+	.block3{
+		display:none;
+	}
+	.block1{
+		display: none;
+	}
+}
+</style>
+<script>
+	function popup() 
+	{
+		//получаем форму
+	let form = document.forms.my; // <form name="my"> element
+	// получаем элемент
+	let elem = form.elements.one; // <input name="one"> element
+	let elem2 = form.elements.two; // <input name="one"> element
+
+	
+
+	 
+
+
+	alert(elem.value); // 1
+		document.getElementById('infbox').innerHTML = 'Добро пожаловать!';
+
+		document.getElementById("myBtn").addEventListener("click", function() {
+ 	    document.getElementById('infbox').innerHTML += "Helo World";
+		});
+		
+		document.getElementById("submit").addEventListener("click", function() {
+			localStorage.setItem('login', elem.value);
+	localStorage.setItem('password', elem2.value);
+
+ 		//let tom = localStorage.getItem('Tom');
+ 	let log = localStorage.getItem('login');
+	let pass = localStorage.getItem('password');
+	
+		 
+			document.getElementById('infbox').innerHTML += log + pass +elem.value +elem2.value;
+	
+		 alert(log);
+	alert(pass);
+		});
+		
+		showPrompt("Введите что-нибудь<br>...умное :)", function(value) {
+  alert(value);
+});
+		
+	// получаем форму
+	// let form = document.forms.my; // <form name="my"> element
+	// // получаем элемент
+	// let elem = form.elements.one; // <input name="one"> element
+	// alert(elem.value); // 1
+	
+// 	 alert(form.elements.login); // <input name="login">
+
+//     let fieldset = form.elements.userFields;
+//     alert(fieldset); // HTMLFieldSetElement
+
+// // мы можем достать элемент по имени как из формы, так и из fieldset с ним
+//     alert(fieldset.elements.login == form.elements.login); // true
+	}
+// 	let form = document.forms.f5;
+
+//     let ageElems = form.elements.age;
+
+//     //alert(ageElems[0]); // [object HTMLInputElement]
+	
+// 	//document.getElementById('infbox').innerHTML += ageElems[0];
+//     $(function (){
+// 		$(".like-button".click(function(){
+// 			var like_counter = $(".like-counter");
+// 			var likes=parseInt(like-counter.text());
+// 			if ($(this).hasClass('liked')){
+// 				like_counter.text(likes-1);
+// 			}
+// 			else{
+// 				like_counter.text(likes+1);
+// 			}
+// 			$(this).toggleClass('liked')
+// 		}));
+
+// 	});
+// 	$(function (){
+// 		myStorage = window.localStorage;
+// 		localStorage.setItem(login, password);
+// 		//let tom = localStorage.getItem('Tom');
+// 		let log = localStorage.getItem(login);
+// 		let pass = localStorage.getItem(password);
+		
+// 		//alert(tom);
+// 		alert(log);
+// 		alert(pass);
+		
+// 		//delete
+// 		localStorage.removeItem(password); // вернёт undefined
+// 		alert(log);
+// 		alert(pass);
+
+// 		//delete all
+// 		localStorage.clear();
+// 		alert(log);
+		
+
+// 	});
+function endform(){
+	let form = document.createElement('form');
+form.action = 'https://google.com/search';
+form.method = 'GET';
+
+form.innerHTML = '<input name="q" value="test">';
+
+// перед отправкой формы, её нужно вставить в документ
+document.body.append(form);
+
+form.submit();
+}
+
+
+		</script>
+</head>
+<body onload="popup()"> 
+	<div class="line"></div><!--END LINE-->
+
+	<div class="block1"></div>
+	
+	<div class="block2" id="SiteNameBackgr">	    
+		<a href="MyQuestions.html" id="SiteName">Hudojniki<img src="https://img.icons8.com/wired/64/000000/paint-brush.png"></a>
+	</div>
+	<div class="block3"></div>
+
+	<div class="line"></div><!--END LINE-->
+
+	<form name="myform" class="login" method="post" action=" "> <!--forms[0]-->
+		<label for="login">Input email</label>
+		<input type="text" id="login" name="login" required/>
+		<label for="password">Input password</label>
+		<input type="password" id="password" name="password" required/>
+		<input id="submit" type="submit" value="Submit" onclick="showPrompt()"/> 
+	</form>
+	<!--Additional-->
+	<div id="fb-root"></div>
+	<!--Additional-->
+		<div class="fb-login-button" data-width="" data-size="large" data-button-type="continue_with" data-layout="default" data-auto-logout-link="false" data-use-continue-as="false">
+		</div>
+	
+	<div id ="infbox"></div>
+
+
+	</div>
+	<a href="#" class="btn btn-default like-button" role="button">
+	(<span class="like_counter">4</span>)
+	Like
+	<span class="glyphicon glyphicon-thumbs-up" aria hidden="true"></span></a>
+	<form name="my"><!--forms[1]-->
+		<input name="one" value="1"> 
+		<input name="two" value="2"> 
+	</form>
+
+	<button id="myBtn">Try it</button>
+	<p id="demo"></p>
+	<!-- <form id="robby"><--forms[2]->
+		<input type="button" onclick="alert(document.forms[2].id);" value="robby's form" />
+	  </form>
+	  
+	  <form id="dave"><--forms[3]->
+		<input type="button" onclick="alert(document.forms[3].id);" value="dave's form" />
+	  </form>
+	  
+	  <form id="paul"><--forms[4]->
+		<input type="button" onclick="alert(document.forms[4].id);" value="paul's form" />
+	  </form>
+	  <form id="f5" ><--forms[5]->
+		<input type="radio" name="age" value="10">
+		<input type="radio" name="age" value="20">
+	  </form>
+	  <form id="form">
+		<fieldset name="userFields">
+		  <legend>info</legend>
+		  <input name="login" type="text">
+		</fieldset> -->
+	  </form>
+</body >
+</html>

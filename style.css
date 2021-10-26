@@ -4,6 +4,13 @@ Author: Marina Pelin
 */
 @import url("reset.css");
 
+.large{
+	border-radius: 80%;
+}
+.centered{
+	position: center;
+}
+
 p {
     text-decoration: none;
     color: #777;
@@ -11,21 +18,17 @@ p {
 }
 /*Дополнительные стили*/
 #wrap {
-	width: 1010px;
 	background: #fff;
 	margin: 0 auto;
 }
 .line {
 	height: 10px;
-	width: 960px;
+	width: 100%;
     background: #66Bfb7;
     margin: 0 auto;
 }
 #menu {
 	margin-top: 20px;
-}
-#menu ul {
-
 }
 #menu ul li {
 
@@ -49,7 +52,21 @@ p {
 	padding-top: 10px; 
 	padding-left: 9px;
 }
-
+#SiteName{
+	float: top;
+	text-decoration: none;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	font-size: xx-large;
+	color: white; 
+	margin-left: 24%;
+	width: 100%;
+	display:block;
+	width: 200px;
+	height: 30px;
+	background: #66Bfb7;
+	padding-top: 10px; 
+	padding-left: 9px;	
+}
 /*HEADER*/
 #header {
 	margin-top: 70px;
@@ -103,30 +120,78 @@ p{
 }
 /*IMG*/
 /* Если картинка маленькая*/
-#topgif {
+/*#topgif {
 	float: right;
+}*/
+.gifsize{
+	height: 100px;
 }
-#mini {
-	height: 400px;
+.mini {
+	height: 200px;
 	float: right;
     margin-right: 25px;
 	border: 4px double black; 
 }
-#large {
-	height: 800px;
+.minilogo {
+	height: 150px;
+    margin-right: 25px;
+}
+.medium {
+	height: 400px;
+	float: right;
+    margin-right: 25px;
+}
+.large {
+	height: 600px;
 	float: left;
 }
 
-#contaier {
-	display: flex;
-	/*flex-direction: column;
-	justify-content: space-around;
-	flex-wrap: wrap;*/
-}
-#wormstoo img {
-	height: 100px;
+#container {
+	display: flexbox;
 }
 
+.fading img:hover{
+	width:50%;
+	height: auto;
+}
+.leftimg {
+    float:left; /* Выравнивание по левому краю */
+    margin: 7px 7px 7px 0; /* Отступы вокруг картинки */
+}
+.rightimg  {
+    float: right; /* Выравнивание по правому краю  */ 
+    margin: 7px 0 7px 7px; /* Отступы вокруг картинки */
+}
+
+.btn {
+   
+	width: 150px;
+		
+	margin: 50px auto;
+		
+	padding: 15px 20px;
+		
+	text-align: center;
+		
+	text-transform: uppercase;
+		
+	color: white;
+		
+	background: #3498db;
+		
+	cursor: pointer;
+	
+	
+	}
+
+#next{
+    float:right; /* Выравнивание по левому краю */
+
+}
+#back{
+    float:left; /* Выравнивание по левому краю */
+
+}
 /*
 {
 	src:url(ANIMATIONshark.gif);
@@ -135,69 +200,91 @@ p{
 
 /*SCREEN SIZE CHANGES*/
 @media (min-width: 1000px){
+	#wrap {
+		width: 1010px;
+	}
 	body{
-		background-color: rgb(135, 217, 250);
+		background-image: url(backgr2.jpg);
+		background-color:lightblue;
 	}
-	#changablesizeQuote{
-		height:500px;
+	.hat{
+	background-size: 15%;
+
 	}
-	#worms img {
-		height: 300px;
-	}
-	#wormstoo img {
-		height: 100px;
-	}
-	#changablesizesmalllogo{
-		height:100px;
-	}
+	
+   .horizontal{
+	margin-left: 40%;
+    }
 }
 @media (max-width: 1000px)and(min-width: 600px){
+
 	body{
 		background-color: lightgreen;
 	}
-	#wrap {
-		width: fit-content;
-		background: rgb(168, 68, 68);
-		margin: 0 250;
+	.hat{
+	background-size: 15%;
+
 	}
-	#changablesizeQuote{
-		height:200px;
-	}
-	#worms img {
-		height: 300px;
-	}
-	#wormstoo img {
-		height: 100px;
-	}
-	#changablesizesmalllogo{
-		height:50px;
-	}
+		
+   .horizontal{
+	margin-left: 30%;
+    }
 }
 @media (max-width: 599px){
 	body{
-		background-color: rgb(6, 85, 6);
+	background: #66Bfb7;
+
 	}
-	#large{
-		height: 400px;
+	.medium{
+		display:none;
 	}
-	#wrap {
-		width: fit-content;
-		background: lightgrey;
-		margin: 0 250;
+	.notimp{
+		display: none;
 	}
-	#changablesizeQuote{
-		height:400px;
+	.large{
+		height: 280px;
 	}
-	#worms img {
-		height: 100px;
+	#m1 {
+		width: 80px;
 	}
-	#wormstoo img {
-		height: 50px;
+	.hat{
+		background-size: contain;
 	}
-	#changablesizesmallHow{
-		height:200px;
-	}
-	#changablesizesmalllogo{
-		height:100px;
-	}
+	
+    .horizontal{
+	margin-left: 0%;
+    }
+
+}
+#maket {
+    width: 100%; /* Ширина всей таблицы */
+   }
+   TD {
+    vertical-align: top; /* Вертикальное выравнивание в ячейках */
+    padding: 5px; /* Поля вокруг ячеек */
+   }
+   TD#leftcol {
+    width: 200px; /* Ширина левой колонки */
+    background: #ccc; /* Цвет фона левой колонки */
+    border: 1px solid #000; /* Параметры рамки */
+   }
+   TD#rightcol {
+    background: #fc3; /* Цвет фона правой колонки */
+    border: 1px solid #000; /* Параметры рамки */
+   }
+   #spacer {
+    width: 10px; /* Расстояние между колонками */
+   }
+
+
+.hat{
+	height:20%;	
+	width:100%;
+	background-image: url("imgTinyartistsmodified.jpg");
+}
+.buttons div{
+	display: inline-block;
+}
+#SiteNameBackgr{
+	background-color: #66Bfb7;
 }
